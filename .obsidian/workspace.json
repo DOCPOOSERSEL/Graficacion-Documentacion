@@ -1,0 +1,177 @@
+{
+  "main": {
+    "id": "d25350fadc713d35",
+    "type": "split",
+    "children": [
+      {
+        "id": "be59613f71f45540",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38b2ad112be25d3c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Translación Estilo Raw.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Translación Estilo Raw"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "deac5c36c2ae2f4b",
+    "type": "split",
+    "children": [
+      {
+        "id": "91fe8dd2b6801d62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7bbbaaf09eaf1ac1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "4c073d42df782821",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e2e7aee4c8859cfe",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "aadf9f5ce6e2841e",
+    "type": "split",
+    "children": [
+      {
+        "id": "3dce3a52339915ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0f09d81a1b6e9a8e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Translación Estilo Raw.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Translación Estilo Raw"
+            }
+          },
+          {
+            "id": "0f6878a331bd8940",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Translación Estilo Raw.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Translación Estilo Raw"
+            }
+          },
+          {
+            "id": "45de02d521390e0f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "bdc057eb5c8f1888",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Translación Estilo Raw.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Translación Estilo Raw"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "38b2ad112be25d3c",
+  "lastOpenFiles": [
+    "Welcome.md",
+    "Translación Estilo Raw.md"
+  ]
+}
