@@ -2,4 +2,4 @@
 
 ## Apuntes
 - [Capa de Invisibilidad](Capa%20de%20Invisibilidad.md)
-- [Traducción Estilos](Traducción%20Estilos.md)
+- [Translación Estilo Raw](Translación%20Estilo%20Raw.md)
