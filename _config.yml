@@ -1,0 +1,6 @@
+# Configuración básica del sitio
+title: 📘 Mis Apuntes
+description: Documentación hecha con GitHub Pages y Jekyll
+theme: jekyll-theme-slate
+
+markdown: kramdown
