@@ -1,7 +1,6 @@
 ---
 title: Inicio
 nav_order: 1
-layout: home
 ---
 
 # 📘 Bienvenido a mi documentación
