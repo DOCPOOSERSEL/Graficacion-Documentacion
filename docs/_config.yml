@@ -9,6 +9,7 @@ plugins:
 markdown: kramdown
 
 just_the_docs:
+theme_mode: dark
   logo: false
   search_enabled: true
   aux_links:
