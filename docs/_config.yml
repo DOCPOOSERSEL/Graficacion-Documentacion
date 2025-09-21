@@ -1,20 +1,17 @@
 title: 📘 Graficación - Documentación
 description: Apuntes y prácticas del curso de Graficación
 
-# Tema oscuro fijo
-remote_theme: pages-themes/midnight@v0.2.0
+remote_theme: just-the-docs/just-the-docs
 
 plugins:
   - jekyll-remote-theme
 
 markdown: kramdown
 
-# Navegación mínima (opcional)
-nav:
-  - name: Inicio
-    link: /
-  - name: Documentación
-    link: /docs/
-  - name: Repositorio
-    link: https://github.com/docpoosersel/Graficacion-Documentacion
-
+just_the_docs:
+  theme_mode: dark
+  logo: false
+  search_enabled: true
+  aux_links:
+    "Ver en GitHub":
+      - "https://github.com/docpoosersel/Graficacion-Documentacion"
