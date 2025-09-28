@@ -1,11 +1,27 @@
+/* Fondo general de la página */
+body {
+  background-color: #121212;  /* fondo muy oscuro */
+  color: #e0e0e0;             /* texto claro */
+}
+
+/* Sidebar y enlaces */
+.sidebar {
+  background-color: #1e1e1e;  /* sidebar oscuro */
+}
+
+a {
+  color: #66c2ff;             /* enlaces más visibles */
+}
+
+/* Bloques de código */
 .highlight {
-  background: none;       /* quita el gris del contenedor */
-  padding: 0;             /* opcional, ajusta el padding */
+  background: none;           /* quita el gris externo */
+  padding: 0;
 }
 
 .highlight pre {
-  background-color: #2d2d2d; /* fondo negro */
-  color: #f8f8f2;            /* texto claro */
+  background-color: #1c1c1c;  /* negro intenso para el código */
+  color: #f8f8f2;
   padding: 1em;
   border-radius: 8px;
   overflow-x: auto;
