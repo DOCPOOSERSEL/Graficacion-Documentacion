@@ -11,6 +11,7 @@ just_the_docs:
   theme_mode: dark
   logo: false
   search_enabled: true
+  head_custom: "_includes/head_custom.html"
   aux_links:
     "Ver en GitHub":
       - "https://github.com/docpoosersel/Graficacion-Documentacion"
