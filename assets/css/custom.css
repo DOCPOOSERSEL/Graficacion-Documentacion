@@ -1,1 +1,8 @@
-a
+/* Fondo oscuro y texto claro para bloques de código */
+.highlight {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+}
