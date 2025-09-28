@@ -1,8 +1,52 @@
+/* =========================
+   Bloques de código
+   ========================= */
 
+/* Contenedor principal del bloque */
+.highlight {
+  background: none;       /* quita el gris del contenedor */
+  padding: 0;
+  position: relative;     /* necesario para mostrar el lenguaje en la esquina */
+}
+
+/* Código dentro del bloque */
 .highlight pre {
-  background-color: #2d2d2d; /* fondo negro */
+  background-color: #2d2d2d; /* fondo negro intenso */
   color: #f8f8f2;            /* texto claro */
   padding: 1em;
   border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.95em;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Mostrar el lenguaje en la esquina superior derecha */
+.highlight pre::before {
+  content: attr(data-lang);   /* GitHub Pages agrega data-lang automáticamente si se indica el lenguaje en los backticks */
+  position: absolute;
+  top: 0.3em;
+  right: 0.5em;
+  background-color: #444;
+  color: #fff;
+  font-size: 0.75em;
+  font-family: monospace;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+
+/* Código inline */
+code {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Opcional: scroll horizontal si una línea es muy larga */
+.highlight pre code {
+  display: block;
   overflow-x: auto;
 }
