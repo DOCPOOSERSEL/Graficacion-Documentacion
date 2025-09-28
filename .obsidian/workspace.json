@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Descomposición de HSV.md",
+                "file": "Descomposición de HSV.md",
                 "mode": "source",
                 "source": false
               },
@@ -199,12 +199,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "66be28970093e5b1",
+  "active": "7bbbaaf09eaf1ac1",
   "lastOpenFiles": [
-    "docs/Translación Estilo Raw.md",
-    "docs/index.md",
-    "docs/Descomposición de HSV.md",
-    "docs/Capa de Invisibilidad.md",
+    "_config.yml",
+    "Translación Estilo Raw.md",
+    "index.md",
+    "Descomposición de HSV.md",
+    "Capa de Invisibilidad.md",
     "docs/_config.yml",
     "Descomposición.md",
     "docs",
