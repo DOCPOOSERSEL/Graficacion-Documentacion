@@ -1,7 +1,7 @@
 title: 📘 Graficación - Documentación
 description: Apuntes y prácticas del curso de Graficación
 
-remote_theme: just-the-docs/just-the-docs
+remote_theme: mmistakes/minimal-mistakes@4.27.3
 plugins:
   - jekyll-remote-theme
 
