@@ -4,7 +4,7 @@ nav_order: 4
 ---
 # Golem bait ins
 ## sexo
-``` Python
+``` python
 import cv2 as cv
 
 print("Golem Bait WTF?")
