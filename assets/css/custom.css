@@ -1,88 +1,28 @@
-/* =========================
-   Fondo general de la página
-   ========================= */
+/* Fondo general de la página */
 body {
   background-color: #121212;  /* fondo muy oscuro */
   color: #e0e0e0;             /* texto claro */
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Sidebar oscuro */
+/* Sidebar y enlaces */
 .sidebar {
-  background-color: #1e1e1e;
+  background-color: #1e1e1e;  /* sidebar oscuro */
 }
 
-/* Enlaces */
 a {
-  color: #66c2ff;
-}
-a:hover {
-  color: #99d6ff;
+  color: #66c2ff;             /* enlaces más visibles */
 }
 
-/* Títulos */
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
-}
-
-/* =========================
-   Bloques de código
-   ========================= */
-
-/* Contenedor principal */
+/* Bloques de código */
 .highlight {
-  position: relative;   /* necesario para mostrar el lenguaje */
-  background: none;     /* quitar gris externo */
+  background: none;           /* quita el gris externo */
   padding: 0;
 }
 
-/* Código en sí */
 .highlight pre {
-  background-color: #1c1c1c; /* fondo negro intenso */
-  color: #f8f8f2;            /* texto claro */
+  background-color: #1c1c1c;  /* negro intenso para el código */
+  color: #f8f8f2;
   padding: 1em;
   border-radius: 8px;
   overflow-x: auto;
-  font-family: monospace;
-  font-size: 0.95em;
-  line-height: 1.4;
-}
-
-/* Mostrar el lenguaje en la esquina superior derecha */
-.highlight pre::before {
-  content: attr(data-lang);  /* GitHub Pages agrega el atributo data-lang automáticamente si usas kramdown con el lenguaje */
-  position: absolute;
-  top: 0.3em;
-  right: 0.5em;
-  background-color: #444;
-  color: #fff;
-  font-size: 0.75em;
-  font-family: monospace;
-  padding: 0.1em 0.4em;
-  border-radius: 4px;
-}
-
-/* Scroll horizontal para líneas largas */
-.highlight pre code {
-  display: block;
-  overflow-x: auto;
-}
-
-/* =========================
-   Otros ajustes visuales
-   ========================= */
-
-/* Sidebar links activos */
-.sidebar a.active {
-  background-color: #333333;
-  border-radius: 4px;
-}
-
-/* Resaltar código inline */
-code {
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: monospace;
 }
