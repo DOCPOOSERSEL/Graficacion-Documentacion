@@ -199,8 +199,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7bbbaaf09eaf1ac1",
+  "active": "66be28970093e5b1",
   "lastOpenFiles": [
+    "_includes/head_custom.html",
+    "_includes",
     "assets/css/custom.css",
     "assets/css",
     "assets",
