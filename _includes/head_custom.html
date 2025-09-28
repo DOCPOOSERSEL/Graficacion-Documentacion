@@ -1,1 +1,28 @@
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('pre > code').forEach((block) => {
+    const classes = block.className.split(' ');
+    let lang = "code"; // default
+    classes.forEach(c => {
+      if (c.startsWith("language-")) lang = c.replace("language-", "");
+    });
+
+    const label = document.createElement('span');
+    label.textContent = lang;
+    label.style.position = 'absolute';
+    label.style.top = '0.3em';
+    label.style.right = '0.5em';
+    label.style.backgroundColor = '#444';
+    label.style.color = '#fff';
+    label.style.fontSize = '0.75em';
+    label.style.fontFamily = 'monospace';
+    label.style.padding = '0.1em 0.4em';
+    label.style.borderRadius = '4px';
+
+    block.parentElement.style.position = 'relative';
+    block.parentElement.appendChild(label);
+  });
+});
+</script>
