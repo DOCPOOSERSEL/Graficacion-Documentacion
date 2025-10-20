@@ -13,7 +13,7 @@
 .highlight pre {
   background-color: transparent; /* quita el fondo negro */
   color: inherit;                /* toma el color de texto del sitio */
-  padding: 1em;
+  padding: 1em 2em;
   border-radius: 8px;
   overflow-x: auto;
   font-family: monospace;
