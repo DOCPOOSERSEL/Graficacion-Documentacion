@@ -11,8 +11,8 @@
 
 /* Código dentro del bloque */
 .highlight pre {
-  background-color: #2d2d2d; /* fondo negro intenso */
-  color: #f8f8f2;            /* texto claro */
+  background-color: transparent; /* quita el fondo negro */
+  color: inherit;                /* toma el color de texto del sitio */
   padding: 1em;
   border-radius: 8px;
   overflow-x: auto;
@@ -22,14 +22,16 @@
   position: relative;
 }
 
+
 /* Código inline */
 code {
-  background-color: #2d2d2d;
-  color: #f8f8f2;
+  background-color: #f5f5f5; /* o 'transparent' si quieres nada */
+  color: #1a1a1a;           /* texto oscuro legible */
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: monospace;
 }
+
 
 /* Opcional: scroll horizontal si una línea es muy larga */
 .highlight pre code {
