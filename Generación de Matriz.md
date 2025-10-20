@@ -1,6 +1,6 @@
 ---
 title: Pixel Art Matriz
-nav_order: 1
+nav_order: 2
 ---
 # Matriz con dibujo
 

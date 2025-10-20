@@ -73,10 +73,10 @@ cv.destroyAllWindows()
 El de la identidad da el mismo valor a otra imagen, básicamente es el copiar la que ya estaba.
 
 ## Negativo
-El Negativo cambia a la imagen a su versión negativa invirtiendo los colores de esta, en este caso a escala de grises
+El Negativo cambia a la imagen a su versión negativa invirtiendo los colores de esta, en este caso a escala de grises.
 
 ## Umbral
-Cambia la imagen a su versión binaria lo cual hace que se pase de una escala de grises a blanco y negro por completo comparándola a un valor y determinando si el pixel se vuelve o negro o blanco
+Cambia la imagen a su versión binaria lo cual hace que se pase de una escala de grises a blanco y negro por completo comparándola a un valor y determinando si el pixel se vuelve o negro o blanco.
 
 ## Brillo mas/menos
-El Brillo solo altera a la imagen de manera que se vuelve mas o menos brilla
+El Brillo solo altera a la imagen de manera que se vuelve mas o menos brillante dependiendo del valor que se le da.
