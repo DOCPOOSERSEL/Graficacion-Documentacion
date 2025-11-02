@@ -61,4 +61,4 @@ cv.destroyAllWindows()
 
 - Se crea la imagen de 50x50 para que sea de menor tamaño y sea mas fácil de dibujar
 - También se usa `[9:12,24:27]` con el fin de cambiar toda esa área de pixeles a color negro
-- Se muestra el resultado del código
+- Se muestra el resultado del código como un muñeco bastante básico
