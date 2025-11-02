@@ -181,8 +181,14 @@ cv.destroyAllWindows()
 # Ya amarroooooooooo siuuuuuu
 ```
 
-Se utiliza el filtro kernel para mejorar la calidad de la imagen, se crea una vecindad para mejor decidir que filtro se va a utilizar por pixel para tener un mejor resultado
+- Se utiliza el filtro kernel para mejorar la calidad de la imagen, se crea una vecindad para mejor decidir que filtro se va a utilizar por pixel para tener un mejor resultado
 
-Después se usan las transformaciones para alterar la imagen para causar una perdida de pixeles para poder probar el filtro
+- Después se usan las transformaciones para alterar la imagen para causar una perdida de pixeles para poder probar el filtro
 
-Se
+- Se aplican las transformaciones a las imágenes para después pasarlas por la función que les pasa los filtros y devuelve la imagen filtrada
+
+- Ya esta solo se muestra como el resultado de las 3 diferentes translaciones para ver como ayuda el filtro en cada ocasión
+
+- Además sirve tanto para demostrar filtros como las transformaciones geométricas vistas en la clase
+
+PD: Ya me callo mal github namas me pasa en ese repo porque namas le pique a algo mal y sepa q hice pero ahora cada momento de mi existencia tengo que estar corrigiendo el pedorro repositorio
