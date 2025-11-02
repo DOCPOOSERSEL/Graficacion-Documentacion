@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ayuda.md",
+                "file": "Cuadrados y Triángulos 3D.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ayuda"
+              "title": "Cuadrados y Triángulos 3D"
             }
           }
         ],
@@ -285,16 +285,16 @@
   },
   "active": "7e4b03b0223d8f8d",
   "lastOpenFiles": [
-    "index.md",
-    "Detección Abrir boca.md",
-    "Calculadora con Seguimiento de Manos.md",
-    "Capa de Invisibilidad.md",
     "Descomposición de HSV.md",
     "Generación de Matriz.md",
+    "Capa de Invisibilidad.md",
+    "Cuadrados y Triángulos 3D.md",
+    "Calculadora con Seguimiento de Manos.md",
+    "index.md",
     "Operadores Puntuales.md",
-    "Translación Estilo Raw.md",
     "Proyecto 1 Dibujo con Seguimiento.md",
-    "Ayuda.md",
+    "Translación Estilo Raw.md",
+    "Detección Abrir boca.md",
     "assets/ayuda.md",
     "_includes/head_custom.html",
     "_includes",

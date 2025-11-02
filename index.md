@@ -5,5 +5,5 @@ nav_order: 1
 
 # Bienvenido Graficación -Documentación  📚
 
-## Orden
+## Índice
 - [Generación de Matriz](Generación de Matriz.md)
