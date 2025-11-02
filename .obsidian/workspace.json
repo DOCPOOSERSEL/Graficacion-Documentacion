@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calculadora con Seguimiento de Manos.md",
+                "file": "Proyecto 1 Dibujo con Seguimiento.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Calculadora con Seguimiento de Manos"
+              "title": "Proyecto 1 Dibujo con Seguimiento"
             }
           },
           {
@@ -327,6 +327,8 @@
   },
   "active": "3187594df6e8ba28",
   "lastOpenFiles": [
+    "Capa de Invisibilidad.md",
+    "Calculadora con Seguimiento de Manos.md",
     "Dibujo Primitivas de dibujo.md",
     "Generación de Matriz.md",
     "Operadores Puntuales.md",
@@ -334,8 +336,6 @@
     "Transformaciones Geo y Filtros.md",
     "Detección Abrir boca.md",
     "Descomposición de HSV.md",
-    "Calculadora con Seguimiento de Manos.md",
-    "Capa de Invisibilidad.md",
     "Translación Estilo Raw.md",
     "Proyecto 1 Dibujo con Seguimiento.md",
     "Ecuaciones Parametricas.md",
