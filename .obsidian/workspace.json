@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Detección Abrir boca.md",
+                "file": "Ayuda.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Detección Abrir boca"
+              "title": "Ayuda"
             }
           }
         ],
@@ -285,14 +285,14 @@
   },
   "active": "7e4b03b0223d8f8d",
   "lastOpenFiles": [
+    "index.md",
+    "Detección Abrir boca.md",
     "Calculadora con Seguimiento de Manos.md",
     "Capa de Invisibilidad.md",
     "Descomposición de HSV.md",
-    "Detección Abrir boca.md",
     "Generación de Matriz.md",
     "Operadores Puntuales.md",
     "Translación Estilo Raw.md",
-    "index.md",
     "Proyecto 1 Dibujo con Seguimiento.md",
     "Ayuda.md",
     "assets/ayuda.md",
