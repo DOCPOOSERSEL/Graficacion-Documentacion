@@ -3,7 +3,7 @@ title: Calculadora con manos
 nav_order: 8
 ---
 # Calculadora seguimiento de manos
-El propósito del código es crear una calculadora simple con cv2, se reutilizo mucho código del [Proyecto 1 Dibujo con seguimiento](Proyecto 1 Dibujo con Seguimiento.md) para crear la interfaz
+El propósito del código es crear una calculadora simple con cv2, se reutilizo mucho código del [Dibujo con seguimiento](Proyecto 1 Dibujo con Seguimiento.md) para crear la interfaz
 - Se vaciaron los cuadros que se crean calculando el tamaño de la pantalla para llenarlos con la función de texto de cv2 y colocar los números
 - Se reutiliza la detección por zonas pero omitiendo que las coordenadas que siguen ahora son las del índice de la mano derecha
 ``` python

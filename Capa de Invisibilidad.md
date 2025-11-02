@@ -112,4 +112,6 @@ cv2.destroyAllWindows()
 
 ```
 
-Toma el fotograma inicial de la cámara para establecerlo como el fondo o la imagen, sobre esta se pone el video que se ve en la cámara
+Toma el fotograma inicial de la cámara para establecerlo como el fondo o la imagen, sobre esta se pone el video que se ve en la cámara y se aplica una mascara la cual permite tomar el color que se le da y removerlo para que se vea la imagen del fondo
+
+Esto se logra por medio de una mascara la cual indica la parte que contiene ese color y después eliminando ese mismo pedazo en donde se encuentra el video para mostrar la imagen que se encuentra en la parte de atrás de el video
