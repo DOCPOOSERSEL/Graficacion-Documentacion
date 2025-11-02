@@ -504,3 +504,70 @@ cap.release()
 cv2.destroyAllWindows()
 
 ```
+
+Se agrego una función llamada 'dibujo_sobre_canvas' la cual nos permite determinar en base a la variable tipo figura que vamos a dibujar a contrario del anterior que solo dibujaba líneas, además de esto, las figuras se alteran gracias a que se dibujan del punto anterior al actual
+
+Gracias a esto mismo se pueden estirar y hacer mas grandes dependiendo de la velocidad a donde muevas el pincel
+
+``` python
+
+def dibujo_sobre_canvas(canvas,prev_center,center,color,tamaño,tipoFigura):
+
+    if tipoFigura == 0:
+
+        # Línea entre el punto anterior y el actual
+
+        cv2.line(canvas, prev_center, center, color, tamaño)
+
+  
+
+    elif tipoFigura == 1:
+
+        # Círculo en la posición actual (tamaño = radio)
+
+        cv2.circle(canvas, center, tamaño, color, -1)
+
+  
+
+    elif tipoFigura == 2:
+
+        # Cuadro entre el punto anterior y el actual
+
+        x1, y1 = prev_center
+
+        x2, y2 = center
+
+        cv2.rectangle(canvas, (x1, y1), (x2, y2), color, tamaño)
+
+```
+
+Todo esto se controla atreves de la teclas 'Q', 'A' y 'Z' respectivamente para seleccionar con que se va a dibujar para ya no saturar el cambas, puramente como una decisión estética y por la facilidad de presionar una  tecla y cambiar el tipo de figura
+
+``` python
+
+key = cv2.waitKey(1) & 0xFF
+
+    if key == 27:  # ESC para salir
+
+        break
+
+    elif key == ord('c'):  # 'c' para limpiar el lienzo
+
+        canvas = np.zeros_like(frame)
+
+    elif key == ord('q'):
+
+        tipoFigura = 0
+
+    elif key == ord('a'):
+
+        tipoFigura = 1
+
+    elif key == ord('z'):    
+
+        tipoFigura = 2
+
+
+```
+
+- Por algún motivo se arreglo el error donde si reiniciabas el cambas con la tecla 'C' se rompía el programa pero ahora esta mas estable 
