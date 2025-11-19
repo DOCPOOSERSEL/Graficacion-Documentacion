@@ -2,6 +2,9 @@
 title: Partes del cuepo
 nav_order: 14
 ---
+### Partes de un cuerpo
+Como no se puede usar las funciones de glut directamente se tiene que hacer una función que remplace las funciones nativas o alternativamente usar la función 'quadratic' que permite el uso de funciones similares a la de glut
+
 ``` python
 import glfw
 
@@ -340,3 +343,5 @@ if __name__ == "__main__":
     main()
 
 ```
+
+Como se ve se pueden remplazar las funciones 'solidglut' por las que usan cuadratic para obtener el mismo exacto resultado que si se usaran las de glut pero ahora solo se llaman glu
