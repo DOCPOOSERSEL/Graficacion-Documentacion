@@ -3,7 +3,7 @@ title: Indice
 nav_order: 1
 ---
 
-# Bienvenido Graficación -Documentación  📚
+# Bienvenido Graficación -Documentación 
 
 PD: No le jueguen al verga con git es mas poderoso que dios
 ## Índice
