@@ -85,7 +85,7 @@ def main():
 
     glutCreateWindow(b'Triangulo con GLUT y Python')
 
-    # En caso de usar el glut para crear la ventanna se deve de formatear el string para que use codificacion en binario o algo asi dice la documentacion
+    # En caso de usar el glut para crear la ventanna se deve de formatear el string para que use codificacion en binario o algo asi dice la documentacion para esto se pone 'b'
 
   
 
@@ -205,7 +205,7 @@ def main():
 
     glutCreateWindow(b'Triangulo con GLUT y Python')
 
-    # En caso de usar el glut para crear la ventanna se deve de formatear el string para que use codificacion en binario o algo asi dice la documentacion
+    # En caso de usar el glut para crear la ventanna se deve de formatear el string para que use codificacion en binario o algo asi dice la documentacion para esto se pone una 'b'
 
   
 
@@ -356,7 +356,7 @@ def main():
 
     glutCreateWindow(b'Triangulo con GLUT y Python')
 
-    # En caso de usar el glut para crear la ventanna se deve de formatear el string para que use codificacion en binario o algo asi dice la documentacion
+    # En caso de usar el glut para crear la ventanna se deve de formatear el string para que use codificacion en binario o algo asi dice la documentacion para esto se pone una 'b'
 
   
 

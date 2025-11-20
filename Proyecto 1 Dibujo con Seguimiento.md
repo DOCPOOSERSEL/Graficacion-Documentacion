@@ -15,65 +15,34 @@ Esa variable entra en la línea donde se determina la línea que se dibuja en la
 ``` python
 
 import cv2
-
 import numpy as np
 
-  
-
 # Captura de video
-
 cap = cv2.VideoCapture(0)
-
   
-
 # Crear un lienzo para dibujar
-
 ret, frame = cap.read()
-
 canvas = np.zeros_like(frame)
-
   
-  
-
 # Rango de color rojo en HSV
-
 lower_red1 = np.array([0, 100, 100])
-
 upper_red1 = np.array([10, 255, 255])
-
-  
-
 lower_red2 = np.array([160, 100, 100])
-
 upper_red2 = np.array([179, 255, 255])
 
-  
-
 # Conocer el tamaño de mi frame para poner los cuadrados
-
 alto, ancho, canales = frame.shape
-
-print("Ancho:", ancho, "Alto:", alto, "Canales:", canales)
-
+print("ancho:", ancho, "altp:", alto, "canal", canales)
 # Arreglo para los colores de los cuadros y tenerlo ordenado, ademas de poder remplazar el color de la linea por el 
 # arreglo dependiendo de donde se encuentre la bola y cambiar de color
-
 colores = [
-
     (0, 0, 255),    # Rojo
-
     (0, 255, 0),    # Verde
-
     (255, 0, 0),    # Azul
-
     (0, 255, 255),  # Amarillo
-
     (255, 0, 255),  # Magenta
-
     (255, 255, 0),  # Cian
-
     (128, 128, 128),# Gris
-
     (0, 128, 255)   # Naranja
 
 ]

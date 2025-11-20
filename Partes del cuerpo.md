@@ -7,23 +7,13 @@ Como no se puede usar las funciones de glut directamente se tiene que hacer una 
 
 ``` python
 import glfw
-
 from OpenGL.GL import *
-
 from OpenGL.GLU import *
-
 import math
 
-  
-
 rotation = 0.0
-
-  
-
 def draw_sphere(radius, slices=30, stacks=30):
-
     """Dibuja una esfera usando primitivas OpenGL (sin GLUT)"""
-
     for i in range(stacks):
 
         lat1 = math.pi * (-0.5 + i / stacks)
@@ -58,23 +48,16 @@ def draw_sphere(radius, slices=30, stacks=30):
 
         glEnd()
 
-  
-
 quad = None
 
   
-
+# Remplazo para que funcionen unas funciones que remplazan las que no permite inicir bien glut
 def init_quadric():
-
     global quad
-
     quad = gluNewQuadric()
-
     gluQuadricNormals(quad, GLU_SMOOTH)
 
   
-  
-
 def draw_eye():
 
     """Dibuja dos esferas simples"""
@@ -137,108 +120,58 @@ def draw_eye():
 
 def draw_hueso():
 
-  
-
     glPushMatrix()
-
-    glColor3f(1.0, 0.95, 0.85)  # color hueso
-
+    glColor3f(1.0, 0.95, 0.85)  # color hueso o blanco pero bonito
     glPushMatrix()
-
     glRotatef(-90, 1, 0, 0)
-
     glTranslatef(0,0,-1)
-
     gluCylinder(quad, 0.2, 0.2, 2.0, 30, 30)
-
     glPopMatrix()
 
-  
-
     glPushMatrix()
-
     glTranslatef(0, -1.0, 0.2)
-
     draw_sphere(0.3, 30, 30)
-
     glPopMatrix()
 
-  
-
     glPushMatrix()
-
     glTranslatef(0, -1.0, -0.2)
-
     draw_sphere(0.3, 30, 30)
-
     glPopMatrix()
 
-  
-
     glPushMatrix()
-
     glTranslatef(0, 1.0, 0.2)
-
     draw_sphere(0.35, 30, 30)
-
     glPopMatrix()
-
-  
 
     glPushMatrix()
-
     glTranslatef(0, 1.0, -0.2)
-
     draw_sphere(0.35, 30, 30)
-
     glPopMatrix()
 
-  
-
-    glPopMatrix()
-
-  
 
 def draw_riñon():
 
     glColor3f(0.65, 0.20, 0.22)
-
     glPushMatrix()
-
     glTranslatef(0, 1, 0.2)
-
     draw_sphere(0.3, 30, 30)
-
     glPopMatrix()
 
   
 
     glPushMatrix()
-
     glTranslatef(0, 0.65, -0.2)
-
     draw_sphere(0.35, 30, 30)
-
     glPopMatrix()
 
-  
-
     glPushMatrix()
-
     glTranslatef(0, 0.35, -0.2)
-
     draw_sphere(0.35, 30, 30)
-
     glPopMatrix()
 
-  
-
     glPushMatrix()
-
     glTranslatef(0, 0, 0.2)
-
     draw_sphere(0.3, 30, 30)
-
     glPopMatrix()
 
   
@@ -315,17 +248,11 @@ def main():
         glRotatef(rotation, 0, 1, 0)
 
         draw_eye()
-
-  
-
+        
         glTranslatef(2, 0, 0)
-
         draw_hueso()
 
-  
-
         glTranslatef(-3,-0.5,0)
-
         draw_riñon()
 
         glfw.swap_buffers(window)
