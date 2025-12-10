@@ -1371,7 +1371,7 @@ results = hands.process(frame_rgb)
                 rotacion_personal = int(np.interp(distancia, [10, 200], [0, 180]))
 ```
 
-el cual nos permite usar los landmarks de las manos atreves de mediapipe para poder rotar el cambas o agrandar el pincel.
+El cual nos permite usar los landmarks de las manos atreves de mediapipe para poder rotar el cambas o agrandar el pincel.
 
 La rotación la maneja esta función la cual nos da el tamaño del frame el cual después obtenemos el alto y el ancho de este para sacar el centro de este y hacer una matriz para rotarlo desde este, para después rotarlo usando warpedAffine
 
