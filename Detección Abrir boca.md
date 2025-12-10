@@ -681,8 +681,145 @@ Ya solo para terminar se sustituyeron modelos de el código original por otros m
 
 ```
 
-### Modelos 3D agregados
+También se les agrego el factor de escala que se obtiene de la distancia entre la barbilla y la frente junto a ambos lados de la cara para agrandar y encoger los modelos según la cercanía de la cara se hacen grandes cuando se alejen se hacen pequeños
 
 ``` python
 
+def calculate_face_scale(landmarks):
+
+    lm = landmarks.landmark
+
+    # Puntos de referencia para calcular dimensiones de la cara
+
+    # Cachetes para el ancho de la cara
+
+    left_cheek = lm[234]
+
+    right_cheek = lm[454]
+
+    # Frente y barbilla para el alto de la cara
+
+    forehead = lm[10]
+
+    chin = lm[152]
+
+    # Convertir a coordenadas
+
+    lcx, lcy, lcz = norm_landmark(left_cheek)
+
+    rcx, rcy, rcz = norm_landmark(right_cheek)
+
+    fx, fy, fz = norm_landmark(forehead)
+
+    cx, cy, cz = norm_landmark(chin)
+
+    # Calcular distancia entre cachetes que es lo ancho
+
+    face_width = math.sqrt((rcx - lcx)**2 + (rcy - lcy)**2 + (rcz - lcz)**2)
+
+    # Calcular distancia entre frente y barbilla que es lo alto
+
+    face_height = math.sqrt((cx - fx)**2 + (cy - fy)**2 + (cz - fz)**2)
+
+    # Calcular tamaño promedio de la cara
+
+    face_size = (face_width + face_height) / 2
+
+    # Factor de escala base
+
+    base_size = 0.8
+
+    scale_factor = face_size * 2.0
+
+    # Limitar el factor de escala para evitar valores extremos
+
+    scale_factor = max(0.3, min(2.0, scale_factor))
+
+    return scale_factor
+
 ```
+
+Lo que hace la función es tomar las facciones de la cara y regresarnos el factor de escalada, ya solo es cuestión de escalar los modelos usando 'glScalef' dandole el factor de escala para que crezca o disminuya el modelo en cuestion
+### Modelos 3D agregados
+
+#### Ojos
+
+``` python
+def draw_eye(x, y, z, izquierdo):
+
+    glPushMatrix()
+
+    glTranslatef(x, y, z)
+
+    # Rotar el ojo para que mire hacia adelante
+
+    # Los ojos originalmente miraban hacia los lados estaba bisco JAJAJAJA
+
+    if izquierdo:
+
+        # Para el ojo izquierdo, rotar 90 grados alrededor
+
+        glRotatef(90, 0, 1, 0)
+
+    else:
+
+        # Para el ojo derecho, rotar -90 grados alrededor
+
+        glRotatef(90, 0, 1, 0)
+
+    # Primera esfera
+
+    glColor3f(0.85, 0.67, 0.65)
+
+    glPushMatrix()
+
+    glTranslatef(0.04, 0, 0)
+
+    draw_sphere_manual(0.024, 16, 16)
+
+    glPopMatrix()
+
+    # Esfera blanca del ojo
+
+    glColor3f(1, 1, 1)
+
+    glPushMatrix()
+
+    glTranslatef(0.03, 0, 0)
+
+    draw_sphere_manual(0.027, 16, 16)
+
+    glPopMatrix()
+
+    # Esfera del iris
+
+    glColor3f(0.84, 0.85, 0.92)
+
+    glPushMatrix()
+
+    glTranslatef(0.02, 0, 0)
+
+    draw_sphere_manual(0.025, 16, 16)
+
+    glPopMatrix()
+
+    # Pupila
+
+    glColor3f(0, 0, 0)
+
+    glPushMatrix()
+
+    glTranslatef(0.01, 0, 0)
+
+    draw_sphere_manual(0.018, 16, 16)
+
+    glPopMatrix()
+
+    glPopMatrix()
+```
+
+#### Orejas
+
+#### Gorrito
+
+#### Labios
