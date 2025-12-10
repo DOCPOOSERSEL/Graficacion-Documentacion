@@ -1371,4 +1371,28 @@ results = hands.process(frame_rgb)
                 rotacion_personal = int(np.interp(distancia, [10, 200], [0, 180]))
 ```
 
-el cual nos permite usar los landmarks de las manos atreves de mediapipe para poder rotar o 
+el cual nos permite usar los landmarks de las manos atreves de mediapipe para poder rotar el cambas o agrandar el pincel.
+
+La rotación la maneja esta función la cual nos da el tamaño del frame el cual después obtenemos el alto y el ancho de este para sacar el centro de este y hacer una matriz para rotarlo desde este, para después rotarlo usando warpedAffine
+
+``` python
+def rotar_canvas(canvas_local, angulo):
+
+    # Esta funcion rota el canvas alrededor de su centro.
+
+    # retorna una nueva imagen rotada
+
+    h, w = canvas_local.shape[:2]
+
+    centro = (w // 2, h // 2)
+
+    M = cv2.getRotationMatrix2D(centro, angulo, 1.0)
+
+    rotado = cv2.warpAffine(canvas_local, M, (w, h))
+
+    return rotado
+```
+
+Lo que hace warpedAffine es darnos la rotación de nuestro canvas  al aplicar a cada pixel la matriz de rotación que generamos en la matriz M a base de el ángulo de rotación que queremos darle y el centro de esta
+
+Lo malo es que debido a la rotación que hay el color se desvanece un poco o se pone borroso debido a como funciona que al darnos coordenadas no tan exactas como (10.5,10.5) se toma el color cercano haciendo que se degrade la imagen
