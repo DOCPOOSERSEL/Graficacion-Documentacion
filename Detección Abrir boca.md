@@ -655,8 +655,7 @@ def norm_landmark(p):
 
 Los ajustes que se le dieron a la normalización fue mas que nada multiplicarlos para que se acomodaran a la cara y que se vieran mejor
 
-La razón para que multiplicara los valores es que  MediaPipe devuelve coordenadas normalizadas entre 0-1, que son muy pequeñas para OpenGL entonces al multiplicarlos se adhieren de mejor manera a la cara
-
+La razón para que multiplicara los valores es que  MediaPipe devuelve coordenadas normalizadas entre 0 y 1, que son muy pequeñas para OpenGL entonces al multiplicarlos se adhieren de mejor manera a la cara
 
 ``` python
 
