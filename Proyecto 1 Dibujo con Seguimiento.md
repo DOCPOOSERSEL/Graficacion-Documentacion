@@ -1072,6 +1072,7 @@ while True:
   
 
     # Usamos results.multi_hand_landmarks junto con results.multi_handedness para
+
     # saber si la mano es izquierda o derecha pero me las da alrevez aveces
 
     if results.multi_hand_landmarks and results.multi_handedness:
@@ -1278,7 +1279,7 @@ while True:
 
     elif key == ord('t'):
 
-        cambiar_tamano_activado = not cambiar_tamano_activado
+        cambiar_tamaño_activado = not cambiar_tamaño_activado
 
     # Tecla r activa/desactiva la rotacio acumulada del canvas con la mano izquierda
 

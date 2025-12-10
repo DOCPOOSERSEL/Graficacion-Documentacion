@@ -62,6 +62,11 @@ def init_glfw():
     if not glfw.init():
 
         raise Exception("No se pudo inicializar GLFW")
+
+    # No especificar version de OpenGL - usar la mejor disponible compatible
+
+    # con fixed-function pipeline (glBegin/glEnd, GL_LIGHTING, etc.)
+
     window = glfw.create_window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, None, None)
 
     if not window:
@@ -75,7 +80,6 @@ def init_glfw():
     glfw.swap_interval(1)
 
     return window
-
   
 
 # ============================================================
@@ -202,11 +206,9 @@ def norm_landmark(p):
     # Multiplicar por factores mayores para ubicarlos
     # Invertir eje Y (coordenadas de pantalla porque si no te las da mal)
 
-    x = (p.x - 0.5) * 2.0  # Amplificar movimiento horizontal
-
-    y = -(p.y - 0.5) * 2.0  # Invertir Y y amplificar
-
-    z = p.z * 3.0  # Amplificar profundidad para mejor efecto 3D
+    x = (p.x - 0.5) * 2  
+    y = -(p.y - 0.5) * 2 
+    z = p.z * 3  # Amplificar profundidad para mejor efecto 3D aunque no mejora tanto al escalarlo mas alla de 3
 
     # Mas que nada toco rescalar las cordenadas para que quedaran centralizadas bien para que funcione
 
@@ -663,13 +665,24 @@ def norm_landmark(p):
     # Multiplicar por factores mayores para ubicarlos
     # Invertir eje Y (coordenadas de pantalla porque si no te las da mal)
 
-    x = (p.x - 0.5) * 2.0  # Amplificar movimiento horizontal
-
-    y = -(p.y - 0.5) * 2.0  # Invertir Y y amplificar
-
-    z = p.z * 3.0  # Amplificar profundidad para mejor efecto 3D
+    x = (p.x - 0.5) * 2  
+    y = -(p.y - 0.5) * 2 
+    z = p.z * 3  # Amplificar profundidad para mejor efecto 3D aunque no mejora tanto al escalarlo mas alla de 3
 
     # Mas que nada toco rescalar las cordenadas para que quedaran centralizadas bien para que funcione
 
     return (x, y, z)
+```
+
+## Parte 2 Agregación de modelos nuevos
+Ya solo para terminar se sustituyeron modelos de el código original por otros modelos para que se vea mejor y se les agrego un movimiento cuando la boca se abre gire una hélice sobre el sombrero
+
+``` python
+
+```
+
+### Modelos 3D agregados
+
+``` python
+
 ```
