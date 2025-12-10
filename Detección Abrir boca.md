@@ -822,4 +822,160 @@ def draw_eye(x, y, z, izquierdo):
 
 #### Gorrito
 
+``` python 
+
+def draw_gorrito_con_helice(x, y, z, scale_factor):
+    global helice_rotation
+    
+    glPushMatrix()
+    glTranslatef(x, y, z)
+    
+    # Ajustar posicion del gorrito
+    glTranslatef(0, 0.15 * scale_factor, 0)
+    
+    # base del gorrito
+    glPushMatrix()
+    glRotatef(-15, 1, 0, 0)
+    
+    # Base del gorrito 
+    glColor3f(1.0, 0.0, 0.0) 
+    quad = gluNewQuadric()
+    gluQuadricNormals(quad, GLU_SMOOTH)
+    
+    # Dibujar cono 
+    glRotatef(-90, 1, 0, 0)
+    gluCylinder(quad, 0.1 * scale_factor, 0.0, 0.3 * scale_factor, 16, 4)
+    
+    # Parte inferior del gorrito (cilindro)
+    glTranslatef(0, 0, 0.3 * scale_factor)
+    gluDisk(quad, 0, 0.1 * scale_factor, 16, 4)
+    
+    gluDeleteQuadric(quad)
+    glPopMatrix()
+    
+    # Helice EL PUTISIMO DEMONIO
+    glPushMatrix()
+    # Posicionar la hélice en la punta del gorrito
+    glTranslatef(0, 0.25 * scale_factor, 0)
+    
+    # Incrementar rotación de la hélice
+    helice_rotation += 10.0
+    if helice_rotation > 360:
+        helice_rotation -= 360
+    
+    # Rotar la hélice
+    glRotatef(helice_rotation, 0, 1, 0)
+    
+    # Color de la hélice
+    helice_color = (0.0, 1.0, 1.0) 
+    
+    # Dibujar hélice (4 aspas)
+    for i in range(4):
+        glPushMatrix()
+        glRotatef(90 * i, 0, 1, 0) 
+        
+        # Aspa de las helices tringualos
+        glColor3f(*helice_color)
+        glBegin(GL_TRIANGLES)
+        glVertex3f(0, 0, 0)
+        glVertex3f(0.15 * scale_factor, 0.02 * scale_factor, 0)
+        glVertex3f(0.15 * scale_factor, -0.02 * scale_factor, 0)
+        glEnd()
+        
+        glPopMatrix()
+    
+    # Centro de la helice
+    glColor3f(1.0, 1.0, 0.0) 
+    quad = gluNewQuadric()
+    gluSphere(quad, 0.03 * scale_factor, 12, 12)
+    gluDeleteQuadric(quad)
+    
+    glPopMatrix()
+    
+    # ========== POM POM EN LA PUNTA ==========
+    glPushMatrix()
+    glTranslatef(0, 0.28 * scale_factor, 0)
+    glColor3f(1.0, 0.0, 1.0)  # Magenta
+    quad = gluNewQuadric()
+    gluSphere(quad, 0.04 * scale_factor, 12, 12)
+    gluDeleteQuadric(quad)
+    glPopMatrix()
+    
+    glPopMatrix()
+
+```
 #### Labios
+
+#### Nariz
+
+``` python
+def draw_nose(landmarks, scale_factor=1.0):
+
+    lm = landmarks
+
+    # Puntos de referencia para la nariz
+
+    nose_tip = lm[1]
+
+    nose_bridge = lm[6]
+
+    nose_left = lm[98]
+
+    nose_right = lm[327]
+
+    # Convertir a coordenadas
+
+    nx, ny, nz = norm_landmark(nose_tip)
+
+    nbx, nby, nbz = norm_landmark(nose_bridge)
+
+    nlx, nly, nlz = norm_landmark(nose_left)
+
+    nrx, nry, nrz = norm_landmark(nose_right)
+
+    # Color cafe claro
+
+    nose_color = (0.65, 0.5, 0.4)
+
+    # Dibujar nariz como un triángulo 3D
+
+    glDisable(GL_LIGHTING)
+
+    glColor3f(*nose_color)
+
+    # Triangulo frontal de la nariz
+
+    glBegin(GL_TRIANGLES)
+
+    # Primer triangulo: puente
+
+    glVertex3f(nbx, nby, nbz)  
+
+    glVertex3f(nlx, nly, nlz)
+
+    glVertex3f(nx, ny, nz)  
+
+    # Segundo triangulo
+
+    glVertex3f(nbx, nby, nbz)  
+
+    glVertex3f(nx, ny, nz)    
+
+    glVertex3f(nrx, nry, nrz)  
+
+    glEnd()
+
+    # Dibujar linea del puente de la nariz pa que quede nice
+
+    glLineWidth(2.0 * scale_factor)
+
+    glBegin(GL_LINES)
+
+    glVertex3f(nbx, nby, nbz)
+
+    glVertex3f(nx, ny, nz)
+
+    glEnd()
+
+    glEnable(GL_LIGHTING)
+```
