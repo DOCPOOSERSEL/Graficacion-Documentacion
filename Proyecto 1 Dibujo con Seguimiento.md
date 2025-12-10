@@ -1072,7 +1072,6 @@ while True:
   
 
     # Usamos results.multi_hand_landmarks junto con results.multi_handedness para
-
     # saber si la mano es izquierda o derecha pero me las da alrevez aveces
 
     if results.multi_hand_landmarks and results.multi_handedness:

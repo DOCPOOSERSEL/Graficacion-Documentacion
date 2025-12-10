@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Proyecto 1 Dibujo con Seguimiento.md",
+                "file": "Detección Abrir boca.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Proyecto 1 Dibujo con Seguimiento"
+              "title": "Detección Abrir boca"
             }
           },
           {
@@ -341,20 +341,20 @@
   },
   "active": "1e370e69043572f6",
   "lastOpenFiles": [
+    "Proyecto 1 Dibujo con Seguimiento.md",
+    "Detección Abrir boca.md",
+    "Dibujo Primitivas de dibujo.md",
+    "Translación Estilo Raw.md",
+    "Transformaciones Geo y Filtros.md",
     "Partes del cuerpo.md",
     "Operadores Puntuales.md",
     "index.md",
     "Generación de Matriz.md",
     "Ecuaciones Parametricas.md",
-    "Dibujo Primitivas de dibujo.md",
-    "Detección Abrir boca.md",
     "Descomposición de HSV.md",
-    "Proyecto 1 Dibujo con Seguimiento.md",
     "Cuadrados y Triángulos 3D.md",
     "Capa de Invisibilidad.md",
     "Calculadora con Seguimiento de Manos.md",
-    "Translación Estilo Raw.md",
-    "Transformaciones Geo y Filtros.md",
     "assets/ayuda.md",
     "_includes/head_custom.html",
     "_includes",
