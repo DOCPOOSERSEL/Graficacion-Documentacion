@@ -739,7 +739,7 @@ def calculate_face_scale(landmarks):
 
 ```
 
-Lo que hace la función es tomar las facciones de la cara y regresarnos el factor de escalada, ya solo es cuestión de escalar los modelos usando 'glScalef' dandole el factor de escala para que crezca o disminuya el modelo en cuestion
+Lo que hace la función es tomar las facciones de la cara y regresarnos el factor de escalada, ya solo es cuestión de escalar los modelos usando 'glScalef' dandole el factor de escala para que crezca o disminuya el modelo en cuestión o directamente multiplicando las funciones que los dibujan
 ### Modelos 3D agregados
 
 #### Ojos
@@ -820,91 +820,147 @@ def draw_eye(x, y, z, izquierdo):
 
 #### Orejas
 
+``` python
+def draw_riñon(x, y, z, scale_factor, is_left=True):
+
+    glPushMatrix()
+
+    glTranslatef(x, y, z)
+
+    if is_left:
+
+        glScalef(-1, 1, 1)
+
+    glColor3f(0.65, 0.20, 0.22)
+
+    # Parte superior del riñon/oreja
+
+    glPushMatrix()
+
+    glTranslatef(0.1 * scale_factor, 0.05 * scale_factor, 0.08 * scale_factor)
+
+    draw_sphere_manual(0.12 * scale_factor, 12, 12)  
+
+    glPopMatrix()
+
+  
+
+    # Parte media superior
+
+    glPushMatrix()
+
+    glTranslatef(0.08 * scale_factor, 0, 0.05 * scale_factor)
+
+    draw_sphere_manual(0.14 * scale_factor, 12, 12)
+
+    glPopMatrix()
+
+  
+
+    # Parte media inferior
+
+    glPushMatrix()
+
+    glTranslatef(0.08 * scale_factor, -0.05 * scale_factor, 0.05 * scale_factor)
+
+    draw_sphere_manual(0.14 * scale_factor, 12, 12)
+
+    glPopMatrix()
+
+  
+
+    # Parte inferior del riño
+
+    glPushMatrix()
+
+    glTranslatef(0.1 * scale_factor, -0.1 * scale_factor, 0.08 * scale_factor)
+
+    draw_sphere_manual(0.12 * scale_factor, 12, 12)
+
+    glPopMatrix()
+
+    glPopMatrix()
+```
 #### Gorrito
 
 ``` python 
-
 def draw_gorrito_con_helice(x, y, z, scale_factor):
-    global helice_rotation
-    
-    glPushMatrix()
-    glTranslatef(x, y, z)
-    
-    # Ajustar posicion del gorrito
-    glTranslatef(0, 0.15 * scale_factor, 0)
-    
-    # base del gorrito
-    glPushMatrix()
-    glRotatef(-15, 1, 0, 0)
-    
-    # Base del gorrito 
-    glColor3f(1.0, 0.0, 0.0) 
-    quad = gluNewQuadric()
-    gluQuadricNormals(quad, GLU_SMOOTH)
-    
-    # Dibujar cono 
-    glRotatef(-90, 1, 0, 0)
-    gluCylinder(quad, 0.1 * scale_factor, 0.0, 0.3 * scale_factor, 16, 4)
-    
-    # Parte inferior del gorrito (cilindro)
-    glTranslatef(0, 0, 0.3 * scale_factor)
-    gluDisk(quad, 0, 0.1 * scale_factor, 16, 4)
-    
-    gluDeleteQuadric(quad)
-    glPopMatrix()
-    
-    # Helice EL PUTISIMO DEMONIO
-    glPushMatrix()
-    # Posicionar la hélice en la punta del gorrito
-    glTranslatef(0, 0.25 * scale_factor, 0)
-    
-    # Incrementar rotación de la hélice
-    helice_rotation += 10.0
-    if helice_rotation > 360:
-        helice_rotation -= 360
-    
-    # Rotar la hélice
-    glRotatef(helice_rotation, 0, 1, 0)
-    
-    # Color de la hélice
-    helice_color = (0.0, 1.0, 1.0) 
-    
-    # Dibujar hélice (4 aspas)
-    for i in range(4):
-        glPushMatrix()
-        glRotatef(90 * i, 0, 1, 0) 
-        
-        # Aspa de las helices tringualos
-        glColor3f(*helice_color)
-        glBegin(GL_TRIANGLES)
-        glVertex3f(0, 0, 0)
-        glVertex3f(0.15 * scale_factor, 0.02 * scale_factor, 0)
-        glVertex3f(0.15 * scale_factor, -0.02 * scale_factor, 0)
-        glEnd()
-        
-        glPopMatrix()
-    
-    # Centro de la helice
-    glColor3f(1.0, 1.0, 0.0) 
-    quad = gluNewQuadric()
-    gluSphere(quad, 0.03 * scale_factor, 12, 12)
-    gluDeleteQuadric(quad)
-    
-    glPopMatrix()
-    
-    # ========== POM POM EN LA PUNTA ==========
-    glPushMatrix()
-    glTranslatef(0, 0.28 * scale_factor, 0)
-    glColor3f(1.0, 0.0, 1.0)  # Magenta
-    quad = gluNewQuadric()
-    gluSphere(quad, 0.04 * scale_factor, 12, 12)
-    gluDeleteQuadric(quad)
-    glPopMatrix()
-    
-    glPopMatrix()
+
+    glPushMatrix()
+
+    glTranslatef(x, y, z)
+
+    glTranslatef(0, -0.02 * scale_factor, 0)  
+
+    glPushMatrix()
+
+    # Base del gorrito
+
+    glColor3f(1.0, 0.0, 0.0)
+
+    quad = gluNewQuadric()
+
+    gluQuadricNormals(quad, GLU_SMOOTH)
+
+    # Dibujar cono pequeño
+
+    glRotatef(-90, 1, 0, 0)
+
+    gluCylinder(quad, 0.07 * scale_factor, 0.0, 0.15 * scale_factor, 12, 4)
+
+    glTranslatef(0, 0, 0.15 * scale_factor)
+
+    gluDeleteQuadric(quad)
+
+    glPopMatrix()
+
+    glPushMatrix()
+
+    glTranslatef(0, 0.12 * scale_factor, 0)
+
+    # Dibujar helise
+
+    for i in range(4):
+
+        glPushMatrix()
+
+        glRotatef(90 * i, 0, 1, 0)  # Rotar 90 grados por cada aspa
+
+        # Aspa de la helice
+
+        glColor3f(0.0, 1.0, 1.0)
+
+        glBegin(GL_TRIANGLES)
+
+        # Centro
+
+        glVertex3f(0, 0, 0)
+
+        # Punta exterior
+
+        glVertex3f(0.08 * scale_factor, 0.015 * scale_factor, 0)
+
+        # Punta interior
+
+        glVertex3f(0.08 * scale_factor, -0.015 * scale_factor, 0)
+
+        glEnd()
+
+        glPopMatrix()
+
+    glColor3f(1.0, 1.0, 0.0)
+
+    quad = gluNewQuadric()
+
+    gluSphere(quad, 0.02 * scale_factor, 10, 10)  # Bola central pequeña
+
+    gluDeleteQuadric(quad)
+
+    glPopMatrix()
+
+    glPopMatrix()
 
 ```
-#### Labios
 
 #### Nariz
 
@@ -933,15 +989,11 @@ def draw_nose(landmarks, scale_factor=1.0):
 
     nrx, nry, nrz = norm_landmark(nose_right)
 
-    # Color cafe claro
-
-    nose_color = (0.65, 0.5, 0.4)
-
     # Dibujar nariz como un triángulo 3D
 
     glDisable(GL_LIGHTING)
 
-    glColor3f(*nose_color)
+    glColor3f(0.65, 0.5, 0.4)
 
     # Triangulo frontal de la nariz
 
