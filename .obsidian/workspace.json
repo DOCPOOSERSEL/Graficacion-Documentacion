@@ -78,6 +78,18 @@
             }
           },
           {
+            "id": "1c2a9719fa69d940",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
+          },
+          {
             "id": "6cac1284fbb45f61",
             "type": "leaf",
             "state": {
@@ -190,7 +202,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -339,7 +351,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e370e69043572f6",
+  "active": "1c2a9719fa69d940",
   "lastOpenFiles": [
     "Translación Estilo Raw.md",
     "index.md",
